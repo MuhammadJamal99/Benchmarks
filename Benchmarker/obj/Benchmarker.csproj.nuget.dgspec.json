@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Algorithms and Data Structures\\C#\\BenchmarkerApp\\Benchmarker\\Benchmarker.csproj": {}
+    "E:\\Benchmarks\\Benchmarks\\Benchmarker\\Benchmarker.csproj": {}
   },
   "projects": {
-    "E:\\Algorithms and Data Structures\\C#\\BenchmarkerApp\\Benchmarker\\Benchmarker.csproj": {
+    "E:\\Benchmarks\\Benchmarks\\Benchmarker\\Benchmarker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Algorithms and Data Structures\\C#\\BenchmarkerApp\\Benchmarker\\Benchmarker.csproj",
+        "projectUniqueName": "E:\\Benchmarks\\Benchmarks\\Benchmarker\\Benchmarker.csproj",
         "projectName": "Benchmarker",
-        "projectPath": "E:\\Algorithms and Data Structures\\C#\\BenchmarkerApp\\Benchmarker\\Benchmarker.csproj",
+        "projectPath": "E:\\Benchmarks\\Benchmarks\\Benchmarker\\Benchmarker.csproj",
         "packagesPath": "C:\\Users\\GENERAL\\.nuget\\packages\\",
-        "outputPath": "E:\\Algorithms and Data Structures\\C#\\BenchmarkerApp\\Benchmarker\\obj\\",
+        "outputPath": "E:\\Benchmarks\\Benchmarks\\Benchmarker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GENERAL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -37,8 +37,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "BenchmarkDotNet": {
               "target": "Package",
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

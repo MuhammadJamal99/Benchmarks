@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Benchmarker.StringBenchmarks.StringBenchmark-20221123-205321</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.2, OS=Windows 10 (10.0.19044.2251/21H2/November2021Update)
+Intel Xeon CPU E5-1620 v2 3.70GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK=7.0.100
+  [Host]     : .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX
+  DefaultJob : .NET 7.0.0 (7.0.22.51805), X64 RyuJIT AVX
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>                Method</th><th>size</th><th>    Mean</th><th>  Error</th><th> StdDev</th><th>  Median</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>UsingPlus</td><td>10</td><td>226.080 ns</td><td>4.5507 ns</td><td>4.4694 ns</td><td>225.765 ns</td><td>680 B</td>
+</tr><tr><td>UsingConcat</td><td>10</td><td>274.414 ns</td><td>5.5411 ns</td><td>11.1933 ns</td><td>270.036 ns</td><td>920 B</td>
+</tr><tr><td>UsingFormat</td><td>10</td><td>845.680 ns</td><td>14.5542 ns</td><td>12.1534 ns</td><td>843.786 ns</td><td>680 B</td>
+</tr><tr><td>UsingStringBuilder</td><td>10</td><td>52.440 ns</td><td>0.8059 ns</td><td>1.1297 ns</td><td>52.157 ns</td><td>160 B</td>
+</tr><tr><td>UsingStringBuilderAppendJoin</td><td>10</td><td>62.563 ns</td><td>1.4129 ns</td><td>3.8677 ns</td><td>61.154 ns</td><td>192 B</td>
+</tr><tr><td>UsingConcatArray</td><td>10</td><td>10.417 ns</td><td>0.2711 ns</td><td>0.6800 ns</td><td>10.288 ns</td><td>32 B</td>
+</tr><tr><td>UsingStringJoin</td><td>10</td><td>26.381 ns</td><td>0.5894 ns</td><td>0.6052 ns</td><td>26.200 ns</td><td>88 B</td>
+</tr><tr><td>UsingPlus</td><td>100</td><td>3,012.125 ns</td><td>39.1791 ns</td><td>32.7163 ns</td><td>3,022.348 ns</td><td>15800 B</td>
+</tr><tr><td>UsingConcat</td><td>100</td><td>3,440.743 ns</td><td>48.3205 ns</td><td>40.3498 ns</td><td>3,444.336 ns</td><td>18200 B</td>
+</tr><tr><td>UsingFormat</td><td>100</td><td>9,257.851 ns</td><td>82.8823 ns</td><td>77.5281 ns</td><td>9,275.429 ns</td><td>15800 B</td>
+</tr><tr><td>UsingStringBuilder</td><td>100</td><td>346.061 ns</td><td>4.4684 ns</td><td>4.1797 ns</td><td>347.493 ns</td><td>776 B</td>
+</tr><tr><td>UsingStringBuilderAppendJoin</td><td>100</td><td>113.425 ns</td><td>2.3340 ns</td><td>3.7019 ns</td><td>112.172 ns</td><td>616 B</td>
+</tr><tr><td>UsingConcatArray</td><td>100</td><td>9.865 ns</td><td>0.1240 ns</td><td>0.1036 ns</td><td>9.828 ns</td><td>32 B</td>
+</tr><tr><td>UsingStringJoin</td><td>100</td><td>45.303 ns</td><td>0.4260 ns</td><td>0.3326 ns</td><td>45.398 ns</td><td>264 B</td>
+</tr><tr><td>UsingPlus</td><td>1000</td><td>127,503.545 ns</td><td>2,122.1176 ns</td><td>1,881.2020 ns</td><td>127,128.430 ns</td><td>1058000 B</td>
+</tr><tr><td>UsingConcat</td><td>1000</td><td>130,874.300 ns</td><td>1,801.2142 ns</td><td>1,684.8569 ns</td><td>131,115.527 ns</td><td>1082000 B</td>
+</tr><tr><td>UsingFormat</td><td>1000</td><td>249,265.492 ns</td><td>3,307.8041 ns</td><td>3,094.1220 ns</td><td>250,888.281 ns</td><td>1058048 B</td>
+</tr><tr><td>UsingStringBuilder</td><td>1000</td><td>2,502.022 ns</td><td>13.2377 ns</td><td>12.3826 ns</td><td>2,505.385 ns</td><td>4584 B</td>
+</tr><tr><td>UsingStringBuilderAppendJoin</td><td>1000</td><td>507.414 ns</td><td>9.0711 ns</td><td>11.7949 ns</td><td>506.462 ns</td><td>4216 B</td>
+</tr><tr><td>UsingConcatArray</td><td>1000</td><td>9.764 ns</td><td>0.0844 ns</td><td>0.0659 ns</td><td>9.762 ns</td><td>32 B</td>
+</tr><tr><td>UsingStringJoin</td><td>1000</td><td>248.305 ns</td><td>3.4577 ns</td><td>3.2343 ns</td><td>248.699 ns</td><td>2064 B</td>
+</tr></tbody></table>
+</body>
+</html>

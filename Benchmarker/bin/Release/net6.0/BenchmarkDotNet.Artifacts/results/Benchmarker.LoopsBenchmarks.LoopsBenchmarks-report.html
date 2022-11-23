@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Benchmarker.LoopsBenchmarks.LoopsBenchmarks-20221123-200341</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.2, OS=Windows 10 (10.0.19044.2251/21H2/November2021Update)
+Intel Xeon CPU E5-1620 v2 3.70GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK=7.0.100
+  [Host]     : .NET 6.0.11 (6.0.1122.52304), X64 RyuJIT AVX
+  DefaultJob : .NET 6.0.11 (6.0.1122.52304), X64 RyuJIT AVX
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>    Method</th><th>size</th><th>     Mean</th><th>  Error</th><th>  StdDev</th><th>   Median</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>For</td><td>100</td><td>90.06 ns</td><td>1.356 ns</td><td>1.202 ns</td><td>89.64 ns</td><td>-</td>
+</tr><tr><td>Foreach</td><td>100</td><td>139.37 ns</td><td>0.614 ns</td><td>0.479 ns</td><td>139.36 ns</td><td>-</td>
+</tr><tr><td>Foreach_Linq</td><td>100</td><td>275.94 ns</td><td>3.057 ns</td><td>2.860 ns</td><td>277.14 ns</td><td>-</td>
+</tr><tr><td>Parallel_Foreach</td><td>100</td><td>4,148.02 ns</td><td>36.361 ns</td><td>34.012 ns</td><td>4,139.57 ns</td><td>2410 B</td>
+</tr><tr><td>Parallel_Linq</td><td>100</td><td>6,151.64 ns</td><td>28.545 ns</td><td>25.304 ns</td><td>6,146.03 ns</td><td>4088 B</td>
+</tr><tr><td>Foreach_Span</td><td>100</td><td>42.97 ns</td><td>0.288 ns</td><td>0.255 ns</td><td>42.99 ns</td><td>-</td>
+</tr><tr><td>For_Span</td><td>100</td><td>44.97 ns</td><td>0.913 ns</td><td>1.622 ns</td><td>44.54 ns</td><td>-</td>
+</tr><tr><td>For</td><td>100000</td><td>81,203.83 ns</td><td>292.265 ns</td><td>228.182 ns</td><td>81,150.43 ns</td><td>-</td>
+</tr><tr><td>Foreach</td><td>100000</td><td>140,019.83 ns</td><td>2,716.172 ns</td><td>6,507.775 ns</td><td>136,838.87 ns</td><td>-</td>
+</tr><tr><td>Foreach_Linq</td><td>100000</td><td>272,720.47 ns</td><td>3,683.745 ns</td><td>3,445.778 ns</td><td>271,905.76 ns</td><td>-</td>
+</tr><tr><td>Parallel_Foreach</td><td>100000</td><td>157,955.49 ns</td><td>1,654.754 ns</td><td>1,381.794 ns</td><td>157,933.91 ns</td><td>3062 B</td>
+</tr><tr><td>Parallel_Linq</td><td>100000</td><td>213,739.24 ns</td><td>7,559.976 ns</td><td>22,290.760 ns</td><td>207,385.71 ns</td><td>4103 B</td>
+</tr><tr><td>Foreach_Span</td><td>100000</td><td>27,171.73 ns</td><td>349.269 ns</td><td>326.706 ns</td><td>27,138.63 ns</td><td>-</td>
+</tr><tr><td>For_Span</td><td>100000</td><td>27,283.43 ns</td><td>226.130 ns</td><td>176.548 ns</td><td>27,301.34 ns</td><td>-</td>
+</tr><tr><td>For</td><td>1000000</td><td>813,539.03 ns</td><td>7,344.867 ns</td><td>6,511.033 ns</td><td>812,783.06 ns</td><td>-</td>
+</tr><tr><td>Foreach</td><td>1000000</td><td>1,362,893.65 ns</td><td>21,711.544 ns</td><td>20,308.992 ns</td><td>1,357,460.94 ns</td><td>1 B</td>
+</tr><tr><td>Foreach_Linq</td><td>1000000</td><td>2,700,086.07 ns</td><td>41,855.849 ns</td><td>39,151.987 ns</td><td>2,696,524.22 ns</td><td>2 B</td>
+</tr><tr><td>Parallel_Foreach</td><td>1000000</td><td>1,430,123.40 ns</td><td>25,856.499 ns</td><td>24,186.185 ns</td><td>1,420,692.58 ns</td><td>3065 B</td>
+</tr><tr><td>Parallel_Linq</td><td>1000000</td><td>1,922,567.08 ns</td><td>41,006.638 ns</td><td>120,908.998 ns</td><td>1,913,496.29 ns</td><td>4117 B</td>
+</tr><tr><td>Foreach_Span</td><td>1000000</td><td>274,348.80 ns</td><td>4,159.607 ns</td><td>3,890.899 ns</td><td>273,252.00 ns</td><td>-</td>
+</tr><tr><td>For_Span</td><td>1000000</td><td>271,075.29 ns</td><td>5,044.714 ns</td><td>4,212.564 ns</td><td>270,609.62 ns</td><td>-</td>
+</tr></tbody></table>
+</body>
+</html>
